@@ -1,0 +1,71 @@
+.main{
+  color: blue;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  margin: 120;
+  padding: 20px;
+}
+h1{
+  text-align: center;
+  background-color: whitesmoke;
+  border-collapse: separate;
+  margin-inline: 10px;
+  padding: 5px;
+
+}
+table{
+  width: 100%;
+  padding: 20px ;
+  border-collapse: collapse;
+  background-color: grey;
+  box-shadow: 0 0 5px grey;
+  border: 2px solid red;
+  border-radius: 10px;
+  block-size: 100px;
+}
+th, td{
+  padding:10px;
+  margin: 0;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+td{
+  font-weight: 100px;
+  width: 10px;
+  height: 20px;
+  padding-bottom: 10px;
+  
+}
+th{
+  text-align: center;
+  background-color: white;
+}
+input [tbody="number"], input[tbody="text"]{
+  width: 100%;
+  margin: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 15px;
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+}
+button:hover{
+  background-color: white;
+  
+}
+button.ok:hover{
+  background-color: green;
+}
+button.cancel:hover{
+  background-color: red;
+}

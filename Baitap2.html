@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bang Diem</title>
+    <link rel="stylesheet" href="Baitap2.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <h1 class="main">Bang Diem Cua Em</h1>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Semester 1</td>
+                <td><input type="number", id="Semester1" , placeholder="Please input number"></td>
+            </tr>
+            <tr>
+                <td>Semester 2</td>
+                <td><input type="number", id="Semester2", placeholder="Please input number"></td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td><input type="number", id="Year"></td>
+            </tr>
+            <tr>
+                <td>Summarise</td>
+                <td><output type="text", id="Summarise" ></td>
+            </tr>
+            <tr>
+                <td>Rank Student</td>
+                <td><output type="text", id="rankStudent"></td>
+            </tr>
+            <tr>
+                <th><button class="ok", id="ok-button">OK</button></th>
+                <th><button class="cancel", id="cancel-button">Cancel</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var Summarise= document.getElementById('Summarise');
+        var rankStudent= document.getElementById('rankStudent');
+        var okbutton= document.getElementById('ok-button');
+        var cancelbutton= document.getElementById('cancel-button');
+
+        okbutton.addEventListener ('click', cal );
+        cancelbutton.addEventListener ('click', reset );
+
+        function cal() {
+            var Semester1 = parseFloat (document.getElementById('Semester1').value);
+            var Semester2 = parseFloat (document.getElementById('Semester2').value);
+            var Summarise = (Semester1 + Semester2) /2;
+            document.getElementById('Summarise').value = Summarise.toFixed(2);
+
+
+            if(Summarise >= 8){
+                rankStudent = "Học Sinh Giỏi";
+            }else if (Summarise >= 6.5){
+                rankStudent = "Học Sinh Khá";
+            }else if (Summarise >=5){
+                rankStudent = "Học Sinh Trung Bình";
+            }
+            else{
+                rankStudent = "Học Sinh yếu";
+            }
+            document.getElementById('rankStudent').value= rankStudent;
+        }
+        function reset(){
+            Semester1.value = " ";
+            Semester2.value = " ";
+            Year.value = " ";
+            Summarise.value = " ";
+            rankStudent.value= " ";
+        }
+        
+    </script>
+        
+    </table>
+</body>
+</html>
